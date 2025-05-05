@@ -15,7 +15,7 @@ import java.util.*;
 public class TrackAlbumReplacer {
 
     public static void main(String[] args) {
-        String csvFilePath = "track.csv"; // SQL-exported track CSV
+        String csvFilePath = "track.csv";
         String outputJsonPath = "track_with_albumId.json";
         String mongoUri = "mongodb://localhost:27017";
         String dbName = "ChinnokAutomaticMapping";
@@ -57,7 +57,7 @@ public class TrackAlbumReplacer {
                     continue;
                 }
 
-                trackDoc.put("AlbumId", albumMongoId); // Replace field
+                trackDoc.put("AlbumId", albumMongoId);
                 updatedTracks.add(trackDoc);
             }
 
