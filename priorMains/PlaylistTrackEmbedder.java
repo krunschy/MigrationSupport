@@ -27,7 +27,6 @@ public class PlaylistTrackEmbedder {
         Map<String, List<String>> trackToPlaylists = new HashMap<>();
         Map<String, List<String>> playlistToTracks = new HashMap<>();
 
-        // 1. Parse CSV and map relationships
         try (
                 Reader reader = new InputStreamReader(new FileInputStream(csvFilePath), StandardCharsets.UTF_8);
                 CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.withFirstRecordAsHeader())
@@ -43,7 +42,6 @@ public class PlaylistTrackEmbedder {
             e.printStackTrace();
         }
 
-        // 2. Update Track documents
         List<Document> updatedTracks = new ArrayList<>();
         try (MongoCursor<Document> cursor = trackCollection.find().iterator()) {
             while (cursor.hasNext()) {
@@ -66,7 +64,6 @@ public class PlaylistTrackEmbedder {
             }
         }
 
-        // 3. Update Playlist documents
         List<Document> updatedPlaylists = new ArrayList<>();
         try (MongoCursor<Document> cursor = playlistCollection.find().iterator()) {
             while (cursor.hasNext()) {
@@ -96,7 +93,6 @@ public class PlaylistTrackEmbedder {
             }
         }
 
-        // 4. Export to JSON
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         try (Writer writer1 = new FileWriter("tracks_with_playlists.json");
              Writer writer2 = new FileWriter("playlists_with_tracks.json")) {
