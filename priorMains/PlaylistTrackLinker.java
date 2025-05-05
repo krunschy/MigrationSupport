@@ -14,7 +14,7 @@ import java.util.*;
 
 public class PlaylistTrackLinker {
     public static void main(String[] args) {
-        String csvFilePath = "playlist_track.csv"; // Place this next to your project root or adjust path
+        String csvFilePath = "playlist_track.csv";
         String mongoUri = "mongodb://localhost:27017";
         String dbName = "ChinnokAutomaticMapping";
 
@@ -50,7 +50,6 @@ public class PlaylistTrackLinker {
                 }
             }
 
-            // Write to JSON file
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             try (Writer writer = new FileWriter("playlist_track_links.json")) {
                 gson.toJson(linkingDocs, writer);
