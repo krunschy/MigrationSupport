@@ -14,7 +14,7 @@ import java.util.List;
 
 public class InvoiceImporter {
     public static void main(String[] args) {
-        String csvFilePath = "invoice.csv"; // Place your CSV file here or update the path
+        String csvFilePath = "invoice.csv";
         String outputJsonPath = "invoice_cleaned.json";
 
         List<Document> invoiceDocs = new ArrayList<>();
@@ -25,7 +25,6 @@ public class InvoiceImporter {
         ) {
             for (CSVRecord record : csvParser) {
                 String invoiceId = record.get("InvoiceId");
-                // Skipping CustomerId
                 String invoiceDate = record.get("InvoiceDate");
                 String billingAddress = record.get("BillingAddress");
                 String billingCity = record.get("BillingCity");
@@ -34,7 +33,7 @@ public class InvoiceImporter {
                 String billingPostalCode = record.get("BillingPostalCode");
                 String total = record.get("Total");
 
-                Document invoiceDoc = new Document("_id", invoiceId)  // Keeping InvoiceId as _id
+                Document invoiceDoc = new Document("_id", invoiceId)
                         .append("invoiceDate", invoiceDate)
                         .append("billingAddress", billingAddress)
                         .append("billingCity", billingCity)
