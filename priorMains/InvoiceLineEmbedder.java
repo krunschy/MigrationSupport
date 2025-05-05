@@ -14,7 +14,7 @@ import java.util.*;
 
 public class InvoiceLineEmbedder {
     public static void main(String[] args) {
-        String csvFilePath = "invoiceline.csv"; // Ensure this is correct
+        String csvFilePath = "invoiceline.csv";
         String mongoUri = "mongodb://localhost:27017";
         String dbName = "ChinnokAutomaticMapping";
 
@@ -24,7 +24,6 @@ public class InvoiceLineEmbedder {
         MongoCollection<Document> invoiceCollection = database.getCollection("invoice");
         MongoCollection<Document> trackCollection = database.getCollection("track");
 
-        // Lookup tables
         Map<String, List<Document>> invoiceToTracks = new HashMap<>();
         Map<String, List<Document>> trackToInvoices = new HashMap<>();
 
@@ -44,7 +43,6 @@ public class InvoiceLineEmbedder {
                     continue;
                 }
 
-                // Prepare track info for embedding into invoice
                 Document trackEmbed = new Document()
                         .append("invoiceLineId", record.get("InvoiceLineId"))
                         .append("TrackId", trackDoc.get("TrackId"))
@@ -61,7 +59,6 @@ public class InvoiceLineEmbedder {
 
                 invoiceToTracks.computeIfAbsent(invoiceId, k -> new ArrayList<>()).add(trackEmbed);
 
-                // Prepare invoice info for embedding into track
                 Document invoiceEmbed = new Document()
                         .append("InvoiceId", invoiceDoc.get("InvoiceId"))
                         .append("InvoiceDate", invoiceDoc.get("InvoiceDate"))
