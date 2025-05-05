@@ -8,17 +8,11 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
-        <!-- MongoDB Java Driver -->
-
-
-        <!-- CSV Reading Library -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-csv</artifactId>
             <version>1.8</version>
         </dependency>
-
-        <!-- JSON Handling -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
