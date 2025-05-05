@@ -4,32 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d46427e-ab79-428c-a27f-c681bf559b9f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/AlbumImporter.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChinnokMigDB.album.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/album.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/album_mapped.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer_invoice_mapping.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invoice.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invoiceline.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playlist_track.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/priorMains/(incomplete)CustomerInvoiceUpdater.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/priorMains/InvoiceImporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/priorMains/InvoiceLineEmbedder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/priorMains/InvoiceLineImporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/priorMains/PlaylistTrackEmbedder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/priorMains/PlaylistTrackLinker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TrackAlbumReplacer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/track.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/track_with_albumId.json" afterDir="false" />
-    </list>
+    <list default="true" id="1d46427e-ab79-428c-a27f-c681bf559b9f" name="Changes" comment="all the mains" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +84,17 @@
       <workItem from="1746262887581" duration="12939000" />
       <workItem from="1746435327628" duration="84000" />
       <workItem from="1746435464282" duration="4744000" />
+      <workItem from="1746457910208" duration="336000" />
     </task>
+    <task id="LOCAL-00001" summary="all the mains">
+      <option name="closed" value="true" />
+      <created>1746458082588</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746458082588</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,5 +102,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="all the mains" />
+    <option name="LAST_COMMIT_MESSAGE" value="all the mains" />
   </component>
 </project>
